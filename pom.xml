@@ -33,6 +33,7 @@
 	<properties>
 		<maven.version>2.0.9</maven.version>
 	</properties>
+
 	<modules>
 		<module>patch-maven-plugin</module>
 		<module>testproject</module>
