@@ -82,7 +82,8 @@ public class CreatePatchMojo extends AbstractMojo {
 					}
 					resolvedBundles.add(toResourceString(resourceArtifact));
 				}
-				createPatchDescriptor(new File(buildDirectory, patch), resolvedBundles);
+				createPatchDescriptor(new File(buildDirectory, patch),
+						resolvedBundles);
 			}
 		} catch (IOException e) {
 			throw new MojoExecutionException("Error populating repository", e);
@@ -90,8 +91,8 @@ public class CreatePatchMojo extends AbstractMojo {
 	}
 
 	private String toResourceString(Artifact resourceArtifact) {
-		return "mvn:" + resourceArtifact.getGroupId()
-				+ "/" + resourceArtifact.getArtifactId() + "/"
+		return "mvn:" + resourceArtifact.getGroupId() + "/"
+				+ resourceArtifact.getArtifactId() + "/"
 				+ resourceArtifact.getVersion() + "/"
 				+ resourceArtifact.getType();
 	}
@@ -172,13 +173,13 @@ public class CreatePatchMojo extends AbstractMojo {
 	private void createPatchDescriptor(File directory, List<String> bundles)
 			throws IOException {
 		File descriptor = new File(directory, patch + ".patch");
-		FileUtils.write(descriptor, String.format("id=%s-patch", patch), false);
-		FileUtils.write(descriptor, String.format("bundles=%s", bundles.size()),
-				true);
+		FileUtils.write(descriptor, String.format("id=%s-patch\n", patch), false);
+		FileUtils.write(descriptor,
+				String.format("bundle.count=%s\n", bundles.size()), true);
 		int bundleId = 0;
 		for (String bundle : bundles) {
 			FileUtils.write(descriptor,
-					String.format("bundle.%s=%s", bundleId++, bundle), true);
+					String.format("bundle.%s=%s\n", bundleId++, bundle), true);
 		}
 	}
 
