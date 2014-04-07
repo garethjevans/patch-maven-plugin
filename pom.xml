@@ -5,6 +5,31 @@
 	<artifactId>patch-maven-plugin-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<name>Patch Maven Plugin</name>
+	<description>a maven plugin to generate a patch for jboss fuse.</description>
+	<url>https://github.com/garethjevans/patch-maven-plugin</url>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Gareth Evans</name>
+			<email>gareth@bryncynfelin.co.uk</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git@github.com:garethjevans/patch-maven-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:garethjevans/patch-maven-plugin.git</developerConnection>
+		<url>git@github.com:garethjevans/patch-maven-plugin.git</url>
+	</scm>
+
 	<properties>
 		<maven.version>2.0.9</maven.version>
 	</properties>
@@ -12,4 +37,5 @@
 		<module>patch-maven-plugin</module>
 		<module>testproject</module>
 	</modules>
+	
 </project>
