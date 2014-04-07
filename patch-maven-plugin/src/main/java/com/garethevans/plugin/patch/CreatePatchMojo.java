@@ -16,6 +16,7 @@ import org.apache.maven.artifact.resolver.ArtifactResolver;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+import org.zeroturnaround.zip.ZipUtil;
 
 /**
  * Copy resources from maven repository to a folder
@@ -84,6 +85,9 @@ public class CreatePatchMojo extends AbstractMojo {
 				}
 				createPatchDescriptor(new File(buildDirectory, patch),
 						resolvedBundles);
+
+				ZipUtil.pack(new File(buildDirectory, patch), new File(
+						buildDirectory, patch + ".zip"));
 			}
 		} catch (IOException e) {
 			throw new MojoExecutionException("Error populating repository", e);
@@ -173,7 +177,8 @@ public class CreatePatchMojo extends AbstractMojo {
 	private void createPatchDescriptor(File directory, List<String> bundles)
 			throws IOException {
 		File descriptor = new File(directory, patch + ".patch");
-		FileUtils.write(descriptor, String.format("id=%s-patch\n", patch), false);
+		FileUtils.write(descriptor, String.format("id=%s-patch\n", patch),
+				false);
 		FileUtils.write(descriptor,
 				String.format("bundle.count=%s\n", bundles.size()), true);
 		int bundleId = 0;
