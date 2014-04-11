@@ -28,6 +28,7 @@
 		<connection>scm:git:ssh://github.com:garethjevans/patch-maven-plugin.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:garethjevans/patch-maven-plugin.git</developerConnection>
 		<url>https://github.com/garethjevans/patch-maven-plugin.git</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
