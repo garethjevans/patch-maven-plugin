@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.garethevans.plugin</groupId>
 	<artifactId>patch-maven-plugin</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Patch Maven Plugin</name>
@@ -25,8 +25,8 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:ssh://github.com:garethjevans/patch-maven-plugin.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:garethjevans/patch-maven-plugin.git</developerConnection>
+		<connection>scm:git:ssh://github.com/garethjevans/patch-maven-plugin.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/garethjevans/patch-maven-plugin.git</developerConnection>
 		<url>https://github.com/garethjevans/patch-maven-plugin.git</url>
 		<tag>HEAD</tag>
 	</scm>
