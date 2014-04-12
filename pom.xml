@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.garethevans.plugin</groupId>
 	<artifactId>patch-maven-plugin</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Patch Maven Plugin</name>
@@ -25,10 +24,10 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:ssh://github.com/garethjevans/patch-maven-plugin.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/garethjevans/patch-maven-plugin.git</developerConnection>
+		<connection>scm:git:git@github.com:garethjevans/patch-maven-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:garethjevans/patch-maven-plugin.git</developerConnection>
 		<url>https://github.com/garethjevans/patch-maven-plugin.git</url>
-		<tag>HEAD</tag>
+		<tag>patch-maven-plugin-0.0.4</tag>
 	</scm>
 
 	<properties>
@@ -59,4 +58,12 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.2</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
