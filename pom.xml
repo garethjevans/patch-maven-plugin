@@ -9,7 +9,7 @@
 	
 	<groupId>com.garethevans.plugin</groupId>
 	<artifactId>patch-maven-plugin</artifactId>
-	<version>0.0.6</version>
+	<version>0.0.7-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Patch Maven Plugin</name>
