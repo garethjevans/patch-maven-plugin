@@ -38,7 +38,6 @@
 
 	<properties>
 		<maven.version>2.0.9</maven.version>
-		<gpg.skip>true</gpg.skip>
 	</properties>
 
 	<dependencies>
@@ -64,5 +63,27 @@
 			<type>jar</type>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>sign-artifacts</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
